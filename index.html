@@ -4,126 +4,324 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>O M Serviços Comerciais | Fornecedor para o Setor Público</title>
-  <meta name="description" content="O M Serviços Comerciais (CNPJ 69.879.478/0001-30) — fornecimento de gêneros alimentícios, materiais de consumo, informática e eletroeletrônicos para órgãos públicos. Campinas/SP.">
+  <meta name="description" content="O M Serviços Comerciais (CNPJ 69.879.478/0001-30): fornecimento de gêneros alimentícios, materiais de consumo, informática e eletroeletrônicos para órgãos públicos. Microempresa sediada em Campinas/SP.">
+  <meta name="theme-color" content="#0a2e57">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="O M Serviços Comerciais | Fornecedor para o Setor Público">
+  <meta property="og:description" content="Alimentos, materiais de consumo, informática e eletros para prefeituras, secretarias e órgãos públicos. Campinas/SP.">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "O M Serviços Comerciais",
+    "legalName": "VITOR GABRIEL OLIVEIRA MARTINS COMERCIO E SERVICOS LTDA",
+    "taxID": "69.879.478/0001-30",
+    "email": "vitor_gabriel-2011@hotmail.com",
+    "telephone": "+55 19 7823-5858",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Joanópolis, 476",
+      "addressLocality": "Campinas",
+      "addressRegion": "SP",
+      "postalCode": "13050-411",
+      "addressCountry": "BR"
+    }
+  }
+  </script>
 </head>
 <body>
-  <header class="topo">
+  <a href="#conteudo" class="pular">Pular para o conteúdo</a>
+
+  <div class="barra-sup">
+    <div class="container barra-sup__inner">
+      <span>CNPJ <strong data-campo="cnpj"></strong> · <span data-campo="porte"></span></span>
+      <span class="barra-sup__contatos">
+        <a data-link="tel"><i data-icon="telefone"></i><span data-campo="telefone"></span></a>
+        <a data-link="mailto"><i data-icon="email"></i><span data-campo="email"></span></a>
+      </span>
+    </div>
+  </div>
+
+  <header class="topo" id="topo">
     <div class="container topo__inner">
-      <a href="#inicio" class="logo" data-campo="nomeFantasia">Empresa</a>
-      <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false">☰</button>
-      <nav class="nav">
-        <a href="#ramos">Ramos de atuação</a>
-        <a href="#licitacoes">Licitações</a>
-        <a href="#sobre">A empresa</a>
-        <a href="#contato" class="btn btn--sm">Fale conosco</a>
+      <a href="#inicio" class="marca" aria-label="Início">
+        <img src="assets/logo.svg" alt="" width="42" height="42">
+        <span><strong data-campo="marca1"></strong><small data-campo="marca2"></small></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Principal">
+        <a href="#produtos">Produtos</a>
+        <a href="#setor-publico">Setor público</a>
+        <a href="#documentacao">Documentação</a>
+        <a href="#empresa">A empresa</a>
+        <a href="#duvidas">Dúvidas</a>
+        <a href="#contato" class="btn btn--primario btn--sm nav__cta">Solicitar cotação</a>
       </nav>
+      <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><i data-icon="menu"></i></button>
     </div>
   </header>
 
-  <main>
+  <main id="conteudo">
+    <!-- HERO -->
     <section id="inicio" class="hero">
+      <div class="hero__fundo" aria-hidden="true"></div>
       <div class="container hero__inner">
-        <div>
-          <span class="tag">Fornecedor para o setor público · Campinas/SP</span>
-          <h1 data-campo="nomeFantasia">Empresa</h1>
-          <p class="hero__lead" data-campo="slogan"></p>
+        <div class="hero__texto">
+          <span class="sobretitulo sobretitulo--claro">Fornecedor para o setor público</span>
+          <h1>Abastecemos o setor público com <span class="destaque">agilidade</span> e <span class="destaque">conformidade</span>.</h1>
+          <p class="hero__lead">Gêneros alimentícios, materiais de consumo, informática e eletroeletrônicos para prefeituras, secretarias e órgãos públicos, com documentação regular, proposta aderente ao edital e entrega no prazo.</p>
           <div class="hero__acoes">
-            <a href="#contato" class="btn">Solicitar proposta / cotação</a>
-            <a href="#licitacoes" class="btn btn--ghost">Documentação de habilitação</a>
+            <a href="#contato" class="btn btn--ouro">Enviar edital ou pedido <i data-icon="seta"></i></a>
+            <a href="#produtos" class="btn btn--contorno-claro">Ver linhas de fornecimento</a>
           </div>
+          <ul class="selos">
+            <li><i data-icon="escudo"></i><span>CNPJ <span data-campo="situacaoMin"></span></span></li>
+            <li><i data-icon="documento"></i>Microempresa · LC 123/2006</li>
+            <li><i data-icon="balanca"></i>Lei 14.133/2021</li>
+          </ul>
         </div>
-        <aside class="ficha">
-          <h2>Dados cadastrais</h2>
-          <dl>
-            <dt>Razão social</dt><dd data-campo="razaoSocial"></dd>
-            <dt>CNPJ</dt><dd data-campo="cnpj"></dd>
-            <dt>Porte</dt><dd data-campo="porte"></dd>
-            <dt>Situação</dt><dd><span class="status-ativa" data-campo="situacao"></span></dd>
-            <dt>Sede</dt><dd data-campo="cidadeUf"></dd>
+
+        <aside class="cartao-cotacao">
+          <div class="cartao-cotacao__topo">
+            <i data-icon="etiqueta"></i>
+            <div>
+              <strong>Cotação para pesquisa de preços</strong>
+              <span>Resposta em até <b data-campo="prazoCotacao"></b></span>
+            </div>
+          </div>
+          <ol class="mini-passos">
+            <li>Envie a lista de itens ou o termo de referência</li>
+            <li>Receba o orçamento formal com CNPJ e validade</li>
+            <li>Use-o no seu processo de contratação</li>
+          </ol>
+          <a href="#contato" class="btn btn--primario btn--bloco">Solicitar orçamento</a>
+          <dl class="cartao-cotacao__dados">
+            <div><dt>CNPJ</dt><dd data-campo="cnpj"></dd></div>
+            <div><dt>Sede</dt><dd data-campo="cidadeUf"></dd></div>
           </dl>
         </aside>
       </div>
     </section>
 
-    <section id="ramos" class="secao">
+    <!-- NÚMEROS -->
+    <section class="numeros" aria-label="Em números">
+      <div class="container numeros__grid" id="lista-numeros"></div>
+    </section>
+
+    <!-- PRODUTOS -->
+    <section id="produtos" class="secao">
       <div class="container">
-        <h2 class="secao__titulo">Linhas de fornecimento</h2>
-        <p class="secao__sub">Organizadas a partir das atividades registradas no CNPJ (CNAE), o que garante compatibilidade com o objeto das licitações em que participamos.</p>
-        <div class="grid grid--ramos" id="lista-ramos"></div>
+        <header class="secao__cab">
+          <span class="sobretitulo">Linhas de fornecimento</span>
+          <h2>O que fornecemos</h2>
+          <p>Cinco linhas organizadas a partir das atividades registradas no CNPJ, o que garante a compatibilidade com o objeto das licitações de que participamos.</p>
+        </header>
+        <div class="abas" role="tablist" aria-label="Linhas de fornecimento" id="abas-produtos"></div>
+        <div id="paineis-produtos"></div>
       </div>
     </section>
 
-    <section id="licitacoes" class="secao secao--alt">
+    <!-- SETOR PÚBLICO -->
+    <section id="setor-publico" class="secao secao--cinza">
       <div class="container">
-        <h2 class="secao__titulo">Licitações e contratos públicos</h2>
-        <p class="secao__sub">Atuamos em pregões, dispensas e demais modalidades da Lei nº 14.133/2021, para órgãos federais, estaduais e municipais.</p>
+        <header class="secao__cab">
+          <span class="sobretitulo">Para compradores públicos</span>
+          <h2>Quem atendemos</h2>
+          <p>Órgãos e entidades das esferas municipal, estadual e federal.</p>
+        </header>
+        <div class="publicos" id="lista-publicos"></div>
 
-        <div class="grid grid--2">
-          <div class="card">
-            <h3>Documentação de habilitação</h3>
-            <p class="muted">Disponível mediante solicitação do órgão ou pregoeiro.</p>
-            <div id="lista-habilitacao"></div>
-          </div>
-          <div class="card">
-            <h3>Cadastros em portais de compras</h3>
-            <ul class="portais" id="lista-portais"></ul>
-            <h3 class="mt">Microempresa – LC 123/2006</h3>
-            <ul class="check" id="lista-beneficios"></ul>
-            <h3 class="mt">Como contratar</h3>
-            <ol class="passos">
-              <li>Envie o termo de referência ou edital.</li>
-              <li>Retornamos com cotação / proposta formal.</li>
-              <li>Participação no certame ou contratação direta.</li>
-              <li>Entrega, nota fiscal e acompanhamento do contrato.</li>
-            </ol>
-          </div>
+        <header class="secao__cab secao__cab--mt">
+          <h2>Formas de contratação</h2>
+          <p>Atuamos em todas as etapas previstas na Lei nº 14.133/2021.</p>
+        </header>
+        <div class="grade grade--4" id="lista-modalidades"></div>
+      </div>
+    </section>
+
+    <!-- COMO TRABALHAMOS -->
+    <section class="secao">
+      <div class="container">
+        <header class="secao__cab secao__cab--centro">
+          <span class="sobretitulo">Processo</span>
+          <h2>Como trabalhamos</h2>
+          <p>Do pedido de cotação ao pagamento, um fluxo claro e alinhado ao rito da administração pública.</p>
+        </header>
+        <ol class="linha-tempo" id="lista-etapas"></ol>
+      </div>
+    </section>
+
+    <!-- DOCUMENTAÇÃO -->
+    <section id="documentacao" class="secao secao--azul">
+      <div class="container">
+        <header class="secao__cab">
+          <span class="sobretitulo sobretitulo--claro">Transparência</span>
+          <h2>Central de documentação</h2>
+          <p>Documentos de habilitação (Lei 14.133/2021, arts. 62 a 70) acompanhados de perto e enviados mediante solicitação do órgão ou do agente de contratação.</p>
+        </header>
+        <div class="doc-grade">
+          <div class="doc-lista" id="lista-documentos"></div>
+          <aside class="doc-lado">
+            <div class="painel">
+              <h3><i data-icon="predio"></i>Cadastros em portais</h3>
+              <ul class="portais" id="lista-portais"></ul>
+            </div>
+            <div class="painel">
+              <h3><i data-icon="escudo"></i>Microempresa · LC 123/2006</h3>
+              <ul class="lista-check" id="lista-beneficios"></ul>
+            </div>
+            <a href="#contato" class="btn btn--ouro btn--bloco" id="btn-kit">Solicitar documentação</a>
+          </aside>
         </div>
       </div>
     </section>
 
-    <section id="sobre" class="secao">
-      <div class="container">
-        <h2 class="secao__titulo">Por que contratar conosco</h2>
-        <div class="grid grid--4" id="lista-diferenciais"></div>
-      </div>
-    </section>
-
-    <section id="contato" class="secao secao--escura">
-      <div class="container grid grid--2">
+    <!-- EMPRESA -->
+    <section id="empresa" class="secao">
+      <div class="container empresa">
         <div>
-          <h2 class="secao__titulo">Fale conosco</h2>
-          <p>Envie o edital, termo de referência ou pedido de cotação.</p>
-          <ul class="contatos">
-            <li><strong>Telefone:</strong> <a data-campo="telefone" data-link="tel"></a></li>
-            <li><strong>E-mail:</strong> <a data-campo="email" data-link="mailto"></a></li>
-            <li><strong>Endereço:</strong> <span data-campo="enderecoCompleto"></span></li>
-            <li><strong>Horário:</strong> <span data-campo="horario"></span></li>
-          </ul>
-          <a class="btn btn--whats" id="btn-whats" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+          <span class="sobretitulo">A empresa</span>
+          <h2>Um fornecedor feito para o setor público</h2>
+          <p class="lead">A <strong data-campo="nomeFantasia"></strong> é uma microempresa com sede em Campinas/SP, criada para atender as compras governamentais com seriedade, preço justo e cumprimento rigoroso de prazos.</p>
+          <p>Reunimos em um só fornecedor itens que os órgãos costumam comprar de vários: alimentos, materiais de consumo, equipamentos de informática e eletrodomésticos. Isso significa menos contratos para gerenciar e um ponto único de contato para cada demanda.</p>
+          <div class="grade grade--2 diferenciais" id="lista-diferenciais"></div>
         </div>
-        <form class="form" id="form-contato">
-          <label>Órgão / Entidade<input name="orgao" required></label>
-          <label>Nome do responsável<input name="nome" required></label>
-          <label>E-mail<input type="email" name="email" required></label>
-          <label>Nº do processo / edital (opcional)<input name="edital"></label>
-          <label>Mensagem<textarea name="mensagem" rows="4" required></textarea></label>
-          <button class="btn" type="submit">Enviar pedido</button>
-          <p class="muted small">O envio abre seu programa de e-mail com a mensagem preenchida.</p>
+        <aside class="ficha">
+          <h3>Dados cadastrais</h3>
+          <dl>
+            <dt>Razão social</dt><dd data-campo="razaoSocial"></dd>
+            <dt>Nome fantasia</dt><dd data-campo="nomeFantasia"></dd>
+            <dt>CNPJ</dt><dd data-campo="cnpj"></dd>
+            <dt>Situação</dt><dd><span class="chip chip--ok" data-campo="situacao"></span></dd>
+            <dt>Porte</dt><dd data-campo="porte"></dd>
+            <dt>Natureza jurídica</dt><dd data-campo="naturezaJuridica"></dd>
+            <dt>Abertura</dt><dd data-campo="dataAbertura"></dd>
+            <dt>Endereço</dt><dd data-campo="enderecoCompleto"></dd>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="duvidas" class="secao secao--cinza">
+      <div class="container faq">
+        <header class="secao__cab">
+          <span class="sobretitulo">Dúvidas frequentes</span>
+          <h2>Perguntas de compradores públicos</h2>
+          <p>Não encontrou sua resposta? <a href="#contato">Fale com a gente</a>.</p>
+        </header>
+        <div class="faq__lista" id="lista-faq"></div>
+      </div>
+    </section>
+
+    <!-- CHAMADA -->
+    <section class="chamada">
+      <div class="container chamada__inner">
+        <div>
+          <h2>Tem um edital ou uma pesquisa de preços em andamento?</h2>
+          <p>Envie para nós. Retornamos com uma proposta formal em até <span data-campo="prazoCotacao"></span>.</p>
+        </div>
+        <a href="#contato" class="btn btn--ouro">Enviar agora <i data-icon="seta"></i></a>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="secao">
+      <div class="container contato">
+        <div class="contato__info">
+          <span class="sobretitulo">Contato</span>
+          <h2>Fale com a nossa equipe</h2>
+          <p>Envie o edital, o termo de referência ou a lista de itens. Se preferir, entre em contato pelos canais abaixo.</p>
+          <ul class="canais">
+            <li><i data-icon="telefone"></i><div><small>Telefone</small><a data-link="tel" data-campo="telefone"></a></div></li>
+            <li><i data-icon="email"></i><div><small>E-mail</small><a data-link="mailto" data-campo="email"></a></div></li>
+            <li><i data-icon="local"></i><div><small>Endereço</small><span data-campo="enderecoCompleto"></span></div></li>
+            <li><i data-icon="relogio"></i><div><small>Atendimento</small><span data-campo="horario"></span></div></li>
+          </ul>
+          <a class="btn btn--whats" data-whats target="_blank" rel="noopener"><i data-icon="mensagem"></i>Conversar no WhatsApp</a>
+        </div>
+
+        <form class="form" id="form-contato" novalidate>
+          <h3>Solicitar cotação ou proposta</h3>
+          <div class="form__linha">
+            <label>Órgão ou entidade *<input name="orgao" required autocomplete="organization"></label>
+            <label>Nome do responsável *<input name="nome" required autocomplete="name"></label>
+          </div>
+          <div class="form__linha">
+            <label>E-mail institucional *<input type="email" name="email" required autocomplete="email"></label>
+            <label>Telefone<input type="tel" name="telefone" autocomplete="tel"></label>
+          </div>
+          <div class="form__linha">
+            <label>Tipo de solicitação
+              <select name="tipo">
+                <option>Cotação para pesquisa de preços</option>
+                <option>Proposta para pregão / dispensa</option>
+                <option>Documentação de habilitação</option>
+                <option>Outro assunto</option>
+              </select>
+            </label>
+            <label>Nº do processo ou edital<input name="edital"></label>
+          </div>
+          <fieldset class="form__linhas">
+            <legend>Linhas de interesse</legend>
+            <div id="check-linhas"></div>
+          </fieldset>
+          <label>Mensagem *<textarea name="mensagem" rows="4" required placeholder="Descreva os itens, quantidades, local e prazo de entrega."></textarea></label>
+          <p class="form__erro" role="alert" hidden>Preencha os campos obrigatórios.</p>
+          <button class="btn btn--primario btn--bloco" type="submit">Enviar solicitação <i data-icon="seta"></i></button>
+          <p class="form__nota">Ao enviar, seu aplicativo de e-mail abrirá com a mensagem pronta. Seus dados são usados apenas para responder a esta solicitação.</p>
         </form>
       </div>
     </section>
   </main>
 
   <footer class="rodape">
-    <div class="container">
-      <p><span data-campo="razaoSocial"></span> — CNPJ <span data-campo="cnpj"></span></p>
-      <p class="small">© <span id="ano"></span>. Todos os direitos reservados.</p>
+    <div class="container rodape__grade">
+      <div>
+        <a href="#inicio" class="marca marca--clara">
+          <img src="assets/logo.svg" alt="" width="40" height="40">
+          <span><strong data-campo="marca1"></strong><small data-campo="marca2"></small></span>
+        </a>
+        <p class="rodape__desc">Fornecimento para o setor público com conformidade, prazo e preço justo.</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#setor-publico">Setor público</a></li>
+          <li><a href="#documentacao">Documentação</a></li>
+          <li><a href="#empresa">A empresa</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Linhas</h4>
+        <ul id="rodape-linhas"></ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a data-link="tel" data-campo="telefone"></a></li>
+          <li><a data-link="mailto" data-campo="email"></a></li>
+          <li data-campo="enderecoCompleto"></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container rodape__base">
+      <span><span data-campo="razaoSocial"></span> · CNPJ <span data-campo="cnpj"></span></span>
+      <span>© <span id="ano"></span> · Todos os direitos reservados</span>
     </div>
   </footer>
 
+  <a class="flutuante-whats" data-whats target="_blank" rel="noopener" aria-label="WhatsApp"><i data-icon="mensagem"></i></a>
+  <a href="#inicio" class="voltar-topo" aria-label="Voltar ao topo"><i data-icon="cima"></i></a>
+
+  <script src="js/icones.js"></script>
   <script src="js/empresa.js"></script>
   <script src="js/main.js"></script>
 </body>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Empresa | Fornecedor para o Setor Público</title>
+  <meta name="description" content="Fornecedor habilitado para licitações e contratações públicas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="container topo__inner">
+      <a href="#inicio" class="logo" data-campo="nomeFantasia">Empresa</a>
+      <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <nav class="nav">
+        <a href="#ramos">Ramos de atuação</a>
+        <a href="#licitacoes">Licitações</a>
+        <a href="#sobre">A empresa</a>
+        <a href="#contato" class="btn btn--sm">Fale conosco</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="container hero__inner">
+        <div>
+          <span class="tag">Fornecedor para o setor público</span>
+          <h1 data-campo="nomeFantasia">Empresa</h1>
+          <p class="hero__lead" data-campo="slogan"></p>
+          <div class="hero__acoes">
+            <a href="#contato" class="btn">Solicitar proposta / cotação</a>
+            <a href="#licitacoes" class="btn btn--ghost">Documentação de habilitação</a>
+          </div>
+        </div>
+        <aside class="ficha">
+          <h2>Dados cadastrais</h2>
+          <dl>
+            <dt>Razão social</dt><dd data-campo="razaoSocial"></dd>
+            <dt>CNPJ</dt><dd data-campo="cnpj"></dd>
+            <dt>Porte</dt><dd data-campo="porte"></dd>
+            <dt>Sede</dt><dd data-campo="cidadeUf"></dd>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section id="ramos" class="secao">
+      <div class="container">
+        <h2 class="secao__titulo">Ramos de atuação</h2>
+        <p class="secao__sub">Atividades registradas no CNPJ (CNAE) — base para participação em licitações compatíveis com o objeto social.</p>
+        <div class="grid grid--ramos" id="lista-ramos"></div>
+      </div>
+    </section>
+
+    <section id="licitacoes" class="secao secao--alt">
+      <div class="container">
+        <h2 class="secao__titulo">Licitações e contratos públicos</h2>
+        <p class="secao__sub">Atuamos em pregões, dispensas e demais modalidades da Lei nº 14.133/2021, para órgãos federais, estaduais e municipais.</p>
+
+        <div class="grid grid--2">
+          <div class="card">
+            <h3>Documentação de habilitação</h3>
+            <p class="muted">Disponível mediante solicitação do órgão ou pregoeiro.</p>
+            <div id="lista-habilitacao"></div>
+          </div>
+          <div class="card">
+            <h3>Cadastros em portais de compras</h3>
+            <ul class="portais" id="lista-portais"></ul>
+            <h3 class="mt">Como contratar</h3>
+            <ol class="passos">
+              <li>Envie o termo de referência ou edital.</li>
+              <li>Retornamos com cotação / proposta formal.</li>
+              <li>Participação no certame ou contratação direta.</li>
+              <li>Entrega, nota fiscal e acompanhamento do contrato.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="secao">
+      <div class="container">
+        <h2 class="secao__titulo">Por que contratar conosco</h2>
+        <div class="grid grid--4" id="lista-diferenciais"></div>
+      </div>
+    </section>
+
+    <section id="contato" class="secao secao--escura">
+      <div class="container grid grid--2">
+        <div>
+          <h2 class="secao__titulo">Fale conosco</h2>
+          <p>Envie o edital, termo de referência ou pedido de cotação.</p>
+          <ul class="contatos">
+            <li><strong>Telefone:</strong> <span data-campo="telefone"></span></li>
+            <li><strong>E-mail:</strong> <a data-campo="email" data-link="mailto"></a></li>
+            <li><strong>Endereço:</strong> <span data-campo="enderecoCompleto"></span></li>
+            <li><strong>Horário:</strong> <span data-campo="horario"></span></li>
+          </ul>
+          <a class="btn btn--whats" id="btn-whats" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+        </div>
+        <form class="form" id="form-contato">
+          <label>Órgão / Entidade<input name="orgao" required></label>
+          <label>Nome do responsável<input name="nome" required></label>
+          <label>E-mail<input type="email" name="email" required></label>
+          <label>Nº do processo / edital (opcional)<input name="edital"></label>
+          <label>Mensagem<textarea name="mensagem" rows="4" required></textarea></label>
+          <button class="btn" type="submit">Enviar pedido</button>
+          <p class="muted small">O envio abre seu programa de e-mail com a mensagem preenchida.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p><span data-campo="razaoSocial"></span> — CNPJ <span data-campo="cnpj"></span></p>
+      <p class="small">© <span id="ano"></span>. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/empresa.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Empresa | Fornecedor para o Setor Público</title>
-  <meta name="description" content="Fornecedor habilitado para licitações e contratações públicas.">
+  <title>O M Serviços Comerciais | Fornecedor para o Setor Público</title>
+  <meta name="description" content="O M Serviços Comerciais (CNPJ 69.879.478/0001-30) — fornecimento de gêneros alimentícios, materiais de consumo, informática e eletroeletrônicos para órgãos públicos. Campinas/SP.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
@@ -27,7 +27,7 @@
     <section id="inicio" class="hero">
       <div class="container hero__inner">
         <div>
-          <span class="tag">Fornecedor para o setor público</span>
+          <span class="tag">Fornecedor para o setor público · Campinas/SP</span>
           <h1 data-campo="nomeFantasia">Empresa</h1>
           <p class="hero__lead" data-campo="slogan"></p>
           <div class="hero__acoes">
@@ -41,6 +41,7 @@
             <dt>Razão social</dt><dd data-campo="razaoSocial"></dd>
             <dt>CNPJ</dt><dd data-campo="cnpj"></dd>
             <dt>Porte</dt><dd data-campo="porte"></dd>
+            <dt>Situação</dt><dd><span class="status-ativa" data-campo="situacao"></span></dd>
             <dt>Sede</dt><dd data-campo="cidadeUf"></dd>
           </dl>
         </aside>
@@ -49,8 +50,8 @@
 
     <section id="ramos" class="secao">
       <div class="container">
-        <h2 class="secao__titulo">Ramos de atuação</h2>
-        <p class="secao__sub">Atividades registradas no CNPJ (CNAE) — base para participação em licitações compatíveis com o objeto social.</p>
+        <h2 class="secao__titulo">Linhas de fornecimento</h2>
+        <p class="secao__sub">Organizadas a partir das atividades registradas no CNPJ (CNAE), o que garante compatibilidade com o objeto das licitações em que participamos.</p>
         <div class="grid grid--ramos" id="lista-ramos"></div>
       </div>
     </section>
@@ -69,6 +70,8 @@
           <div class="card">
             <h3>Cadastros em portais de compras</h3>
             <ul class="portais" id="lista-portais"></ul>
+            <h3 class="mt">Microempresa – LC 123/2006</h3>
+            <ul class="check" id="lista-beneficios"></ul>
             <h3 class="mt">Como contratar</h3>
             <ol class="passos">
               <li>Envie o termo de referência ou edital.</li>
@@ -94,7 +97,7 @@
           <h2 class="secao__titulo">Fale conosco</h2>
           <p>Envie o edital, termo de referência ou pedido de cotação.</p>
           <ul class="contatos">
-            <li><strong>Telefone:</strong> <span data-campo="telefone"></span></li>
+            <li><strong>Telefone:</strong> <a data-campo="telefone" data-link="tel"></a></li>
             <li><strong>E-mail:</strong> <a data-campo="email" data-link="mailto"></a></li>
             <li><strong>Endereço:</strong> <span data-campo="enderecoCompleto"></span></li>
             <li><strong>Horário:</strong> <span data-campo="horario"></span></li>

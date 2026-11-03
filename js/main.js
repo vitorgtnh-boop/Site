@@ -4,6 +4,7 @@
   const campos = {
     ...E,
     telefone: E.contato.telefone,
+    telefoneLink: "tel:+55" + E.contato.telefone.replace(/\D/g, ""),
     email: E.contato.email,
     horario: E.contato.horario,
     cidadeUf: `${end.cidade}/${end.uf}`,
@@ -15,6 +16,7 @@
     if (v == null) return;
     el.textContent = v;
     if (el.dataset.link === "mailto") el.href = `mailto:${v}`;
+    if (el.dataset.link === "tel") el.href = campos.telefoneLink;
   });
   document.title = `${E.nomeFantasia} | Fornecedor para o Setor Público`;
   document.getElementById("ano").textContent = new Date().getFullYear();
@@ -27,8 +29,14 @@
       ${r.principal ? '<span class="tag tag--sm">Atividade principal</span>' : ""}
       <h3>${esc(r.titulo)}</h3>
       <p>${esc(r.descricao)}</p>
-      <p class="cnae"><strong>CNAE ${esc(r.cnae)}</strong> — ${esc(r.cnaeDescricao)}</p>
+      <ul class="exemplos">${r.exemplos.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
+      <details class="cnae">
+        <summary>CNAE${r.cnaes.length > 1 ? "s" : ""} (${r.cnaes.length})</summary>
+        <ul>${r.cnaes.map(([c, d, p]) => `<li><strong>${esc(c)}</strong> — ${esc(d)}${p ? " <em>(principal)</em>" : ""}</li>`).join("")}</ul>
+      </details>
     </article>`).join("");
+
+  document.getElementById("lista-beneficios").innerHTML = E.beneficiosME.map((b) => `<li>${esc(b)}</li>`).join("");
 
   document.getElementById("lista-habilitacao").innerHTML = E.habilitacao.map((g) => `
     <h4>${esc(g.grupo)}</h4>
@@ -41,7 +49,8 @@
     <div class="card"><h3>${esc(d.titulo)}</h3><p>${esc(d.texto)}</p></div>`).join("");
 
   const whats = document.getElementById("btn-whats");
-  whats.href = `https://wa.me/${E.contato.whatsapp}?text=${encodeURIComponent("Olá! Gostaria de solicitar uma cotação.")}`;
+  if (!E.contato.whatsapp) whats.remove();
+  else whats.href = `https://wa.me/${E.contato.whatsapp}?text=${encodeURIComponent("Olá! Gostaria de solicitar uma cotação.")}`;
 
   document.getElementById("form-contato").addEventListener("submit", (ev) => {
     ev.preventDefault();
